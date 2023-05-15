@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.header{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./background-image.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+}
+
+.page-title{
+    color: #fff;
+    padding: 10px;
+}
+
+.navigation{
+    background: #94e005;
+    text-align: center;
+}
+
+.navigation ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+.navigation ul li{
+    width: 120px;
+    padding: 10px;
+    margin: 8px;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.navigation ul li a:hover {
+    color: #fff;
+}
+
+.main-heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.main-text{
+    color: #94e005;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-subtext{
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.about-section{
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-img{
+    width: 200px;
+    margin: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    background: #94e005;
+    box-shadow: 0 4px 6px #222;
+}
+
+.about-heading-container{
+    position: relative;
+    padding: 50px;
+}
+
+.about-heading{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+
+.about-para{
+    font-size: 18px;
+}
+
+.project-section{
+    background: #cfcece;
+}
+
+.project-section-heading{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding: 30px;
+}
+
+.project-article{
+    text-align: center;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+.article-text, .article-heading{
+    padding: 20px;
+    
+}
+
+.my-skills{
+    background-color: #809a6b;
+    padding-top: 20px;
+    padding-left: 200px;
+    padding-bottom: 30px;
+}
+.space{
+    padding: 20px;
+    color: rgb(30, 30, 208);
+}
+.last{
+    background-color: #94e005;
+    text-align: center;
+    font-size: 120%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+}
+
+
