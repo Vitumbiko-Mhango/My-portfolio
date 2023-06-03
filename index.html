@@ -2,10 +2,12 @@
     <html>
         <head>
             <title>Vitumbiko Mhango Portifolio </title>
-
             <link rel="stylesheet" href="style.css">
+            
         </head>
-        <body>
+        <body onload="getCurrentDateTime()">
+
+          
             <!-- <img src="mzuni2.png" alt="log"> -->
 
             <!-- homepage section -->
@@ -15,20 +17,33 @@
                   <ul>
                     <li><a href="home.html">home</a></li>
                     <li><a href="about.html">about</a></li>
-                    <li><a href="#">services</a></li>
+                    <li><a href="service.html">projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </nav>
+                
+
+    
                 <h2 class="page-title">Vitumbiko Mhango</h2>
+
+                <h1 id="greeting"></h1>
+                <script src="jav.js"></script>
+                <p style="color: blue; text-align: center; font-size: 20px;"  id="datetime"></p>
+                      
+
                 <div class="main-heading">
                     <h1 class="main-text">
+                      <br>
                       <marquee behavior="scroll" direction="left" width = "600px">game changer
                       </marquee> 
                     </h1>
+                                   
                     <p class="main-subtext">
                       <marquee behavior="altermate" direction="up" height ="300px" width ="700px">
                         It's really amazing to be in the game, we design websites of your choice.
                       </marquee> </p>
+
+                      
                 </div>
               </header>
               <!-- end of homepage section -->
@@ -45,37 +60,54 @@
                     Software Engineer, and i have developed several android apps which has helped the community
                     in collection of data in an easy way. i have also created several projects for both students 
                     and for the University. 
+                  </div>
+                </p>
 
-                    </p>
-                </div>
+                    <!-- slideshow  -->  
+                    <h2 >Featured Projects</h2>
+                    <div class="slideshow-container">
+                      <div class="slide">
+                        <img src="img.jpg" height="250px" width="300px">
+                      </div>
+                      <div class="slide">
+                        <img src="net.jpg" height="250px" width="300px">
+                      </div>
+                      <div class="slide">
+                        <img src="board.jpg" height="250px" width="300px">
+                      </div>
+                    </div>
+                    
+                    
               </section>
               <!-- end of about section -->
               
 
               <section class="project-section">
                 <h2 class="project-section-heading">projects</h2>
+
                 
                 <article class="project-article">
-                  <div class="article-container">
+
+                  <div>
                     <h3 class="article-heading">Web development</h3>
                     <img src="img.jpg" alt="" height="250px" width = "300px">
                     <p class="article-text">developed a website for abc company</p>
                     <a href="www.abc.com">visit site</a>
-                
-                
+                  
                 <article class="project-article">
                   <div class="article-container">
                     <h3 class="article-heading">Computer Repairing and Maintanance</h3>
                     <img src="board.jpg".jpg" alt="" height="250px" width = "300px">
                     <p class="article-text">maintained and repaired computers for Abc company </p>
-                    <a href="www.abc.com">visit site</a
+                    <a href="www.abc.com">visit site</a>
                   </div>
                 </article>
+              
 
               </section>
             
-
               <section class="my-skills">
+                
                 
                 <h3 class="space">SKILLS</h3>
                   <h4>Website Development</h4>
@@ -125,6 +157,26 @@
 
               </section>
 
+              <form id="contactForm">
+                <div>
+                  <label for="name">Name:</label> <br>
+                  <input type="text" id="name" name="name" required><br> <br> 
+                  <span id="nameError" class="error"></span>  
+                </div>
+                <div>
+                  <label for="email">Email:</label> <br> 
+                  <input type="email" id="email" name="email" required> <br> <br> 
+                  <span id="emailError" class="error"></span>
+                </div>
+                <div>
+                  <label for="message">Message:</label> <br> 
+                  <textarea id="message" name="message" required></textarea><br> <br>
+                  <span id="messageError" class="error"></span>
+                </div>
+                <div>
+                  <button type="submit">Submit</button> 
+                </div>
+              </form>
 
               <section class="last">
                 <footer>
@@ -144,5 +196,12 @@
                         <a href="http://www.instagram.com/Vitumbiko Mhango" >Instagram</a>
                       </div> 
 
+                      
+                  
+
                 </footer>
               </section>
+              <script src="jav.js"></script>
+              
+              </body>
+          </html>
