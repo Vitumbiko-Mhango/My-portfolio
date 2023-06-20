@@ -1,13 +1,15 @@
+<?php include("headers.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>My Projects</title>
 </head>
 <body>
    
     <h1>Projects</h1>
-    <script src="jav.js"></script>
+    <script src="js/jav.js"></script>
     <input type="text" id="searchInput" placeholder="Search for projects...">
   
     <ul id="projectList">

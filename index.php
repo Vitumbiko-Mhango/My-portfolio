@@ -1,8 +1,10 @@
+<?php include("headers.php"); ?>
+
 <!DOCTYPE html>
     <html>
         <head>
             <title>Vitumbiko Mhango Portifolio </title>
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="css/style.css">
             
         </head>
         <body onload="getCurrentDateTime()">
@@ -12,22 +14,13 @@
 
             <!-- homepage section -->
 
-            <header class="header">
-                <nav class="navigation">
-                  <ul>
-                    <li><a href="home.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="service.html">projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </nav>
-                
+            <header class="header">            
 
     
                 <h2 class="page-title">Vitumbiko Mhango</h2>
 
                 <h1 id="greeting"></h1>
-                <script src="jav.js"></script>
+                <script src="js/jav.js"></script>
                 <p style="color: blue; text-align: center; font-size: 20px;"  id="datetime"></p>
                       
 
@@ -201,7 +194,7 @@
 
                 </footer>
               </section>
-              <script src="jav.js"></script>
+              <script src="js/jav.js"></script>
               
               </body>
           </html>
