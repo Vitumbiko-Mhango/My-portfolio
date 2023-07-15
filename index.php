@@ -7,7 +7,25 @@
         </head>
         <body onload="getCurrentDateTime()">
 
-          
+        <?php
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "portfolio";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+?>
+
+
+
+
+
             <!-- <img src="mzuni2.png" alt="log"> -->
 
             <!-- homepage section -->
@@ -15,13 +33,12 @@
             <header class="header">
                 <nav class="navigation">
                   <ul>
-                    <li><a href="home.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="service.html">projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="projects.php">projects</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="skills.php">skills</a></li>
                   </ul>
                 </nav>
-                
+          
 
     
                 <h2 class="page-title">Vitumbiko Mhango</h2>
@@ -51,29 +68,42 @@
             <!-- start of about section -->
             <section class="about-section">
                 <div class="img-container">
-                    <img src="image.jpg" alt="" class="main-img">
+                    <img src="images/image.jpg" alt="" class="main-img">
                 </div>
                 <div class="about-heading-container">
-                  <h2 class="about-heading">about me</h2>
-                  <p class="about-para">
-                    My name is Vitumbiko Mhango, i am a second year student at Mzuzu University. i am a dedicated 
-                    Software Engineer, and i have developed several android apps which has helped the community
-                    in collection of data in an easy way. i have also created several projects for both students 
-                    and for the University. 
-                  </div>
-                </p>
+                  
+                  
+    <?php
+                // SQL query to retrieve data from the database
+    $sql = "SELECT * FROM home";
+    $result = $conn->query($sql);
 
+    if ($result->num_rows > 0) {
+        // Output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "" . $row["aboutme"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+
+
+
+              
+              </div>
                     <!-- slideshow  -->  
                     <h2 >Featured Projects</h2>
                     <div class="slideshow-container">
                       <div class="slide">
-                        <img src="img.jpg" height="250px" width="300px">
+                        <img src="images/img.jpg" height="250px" width="300px">
                       </div>
                       <div class="slide">
-                        <img src="net.jpg" height="250px" width="300px">
+                        <img src="images/net.jpg" height="250px" width="300px">
                       </div>
                       <div class="slide">
-                        <img src="board.jpg" height="250px" width="300px">
+                        <img src="images/board.jpg" height="250px" width="300px">
                       </div>
                     </div>
                     
@@ -90,14 +120,14 @@
 
                   <div>
                     <h3 class="article-heading">Web development</h3>
-                    <img src="img.jpg" alt="" height="250px" width = "300px">
+                    <img src="images/img.jpg" alt="" height="250px" width = "300px">
                     <p class="article-text">developed a website for abc company</p>
                     <a href="www.abc.com">visit site</a>
                   
                 <article class="project-article">
                   <div class="article-container">
                     <h3 class="article-heading">Computer Repairing and Maintanance</h3>
-                    <img src="board.jpg".jpg" alt="" height="250px" width = "300px">
+                    <img src="images/board.jpg".jpg" alt="" height="250px" width = "300px">
                     <p class="article-text">maintained and repaired computers for Abc company </p>
                     <a href="www.abc.com">visit site</a>
                   </div>
@@ -111,53 +141,30 @@
                 
                 <h3 class="space">SKILLS</h3>
                   <h4>Website Development</h4>
-                  <p>
-                    <u >Tools used</u>
-                    
-                      <li>
-                        text editors eg visual studio code
-                      </li>
-                      <li>
-                        debuggers eg chrome developer tools
-                      </li>
-                      <li>
-                        browser extensions eg AdBlock  
-                      </li>
-                    
-                    <u>Tecnologies used</u>
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>Java script</li>
-                  </p>
-                    <br> <br>
-                  <h4>Software Development</h4>
-                  <p class="tool">
-                    
-                    <u>Tools used</u>
-                      <li>
-                        Intergrated development environment (IDEs) eg IntelliJ IDEA
-                      </li>
-                      <li>
-                        Version control system eg GIT
-                      </li>
-                      <li>
-                        Build tools eg maven and Gradle 
-                      </li>
-                    <u>Tecnologies used</u>
-                      <li>Programming language eg Java and python
+                  
+                  <?php
+                // SQL query to retrieve data from the database
+                    $sql = "SELECT * FROM home";
+                    $result = $conn->query($sql);
 
-                      </li>
-                      <li>
-                        Web frmeworks eg Django and Spring
-                      </li>
-                      <li>
-                        Database management systems eg MySQL and Oracle
-                      </li>
-                  </p>
+                    if ($result->num_rows > 0) {
+                        // Output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo "" . $row["myskills"]. "<br>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                    ?>
 
-              </section>
 
-              <form id="contactForm">
+
+
+
+
+
+
+                  <form id="contactForm">
                 <div>
                   <label for="name">Name:</label> <br>
                   <input type="text" id="name" name="name" required><br> <br> 
@@ -177,27 +184,30 @@
                   <button type="submit">Submit</button> 
                 </div>
               </form>
+              </section>
+
+          
 
               <section class="last">
                 <footer>
-                  <h2 >Contacts</h2> <br>
-                  <p>+265 884 207 696 / +265 995 764 949</p> 
-                  <p>
-                    Email : <a href="mailto:mhangovitumbiko100@gmail.com">mhangovitumbiko100@gmail.com</a> 
-                  </p> <br>
-
-                    <p>follow me on social media:</p>
-
-                    <div class="contact">
-                        <a href="http://www.facebook.com/Vitumbiko Mhango" >facebook</a> <br>
-                      
-                        <a href="http://www.twitter.com/Vitumbiko Mhango" >Twitter</a> <br>
-                      
-                        <a href="http://www.instagram.com/Vitumbiko Mhango" >Instagram</a>
-                      </div> 
-
-                      
                   
+
+                <?php
+                // SQL query to retrieve data from the database
+                  $sql = "SELECT * FROM home";
+                  $result = $conn->query($sql);
+
+                  if ($result->num_rows > 0) {
+                      // Output data of each row
+                      while($row = $result->fetch_assoc()) {
+                          echo "" . $row["footer"]. "<br>";
+                      }
+                  } else {
+                      echo "0 results";
+                  }
+                      // Close the connection
+                  $conn->close();
+                  ?>
 
                 </footer>
               </section>
