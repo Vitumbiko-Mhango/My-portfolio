@@ -1,0 +1,13 @@
+
+	PORTFOLIO PROJECT
+To view the project
+  1. download all the files
+  2. copy them into web folder
+  3. create folders same as you downloded the files from
+  4. put every file into the appropriate folder
+  5. copy the web folder, paste it in the XAMP/htdocs folder
+  6. import the database which is in the database folder in the Xamp. 
+     The database should portfolio
+  7. start apache and mysql
+  8. run it in the browser using the link eg localhost/htdocs/index.php 
+ 
